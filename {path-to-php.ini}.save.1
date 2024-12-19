@@ -1,0 +1,18 @@
+memory_limit = 4G
+
+sudo systemctl restart apache2
+
+sudo systemctl restart nginx
+
+sudo systemctl restart php-fpm
+
+php -i | grep 'memory_limit'
+
+
+
+
+
+
+
+
+

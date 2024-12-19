@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <!-- Add Bootstrap 4 CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body class="vertical-layout vertical-menu-modern" data-open="click" data-menu="vertical-menu-modern" data-col=""
+    data-framework="laravel">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="brand-text text-primary ms-1">Admin Login</h2>
+
+                        @if(\Session::get('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <div class="alert-body">
+                                {{ \Session::get('success') }}
+                            </div>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        @endif
+                        {{ \Session::forget('success') }}
+                        @if(\Session::get('error'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <div class="alert-body">
+                                {{ \Session::get('error') }}
+                            </div>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        @endif
+
+                        <form class="mt-2" action="" method="post">
+                            @csrf
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" id="email" name="email" value="{{old('email')}}"
+                                    autofocus />
+                                @if ($errors->has('email'))
+                                <span class="help-block font-red-mint">
+                                    <strong>{{ $errors->first('email') }}</strong>
+                                </span>
+                                @endif
+                            </div>
+
+                            <div class="form-group">
+                                <div class="d-flex justify-content-between">
+                                    <label for="password">Password</label>
+                                    <a href="{{url('auth/forgot-password-basic')}}">
+                                        <small>Forgot Password?</small>
+                                    </a>
+                                </div>
+
+                                <div class="input-group input-group-merge form-password-toggle">
+                                    <input type="password" class="form-control form-control-merge" id="password"
+                                        name="password" tabindex="2" />
+                                    <div class="input-group-append">
+                                        <span class="input-group-text cursor-pointer" id="basic-addon2">
+                                            <i data-feather="eye"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <label for="password"></label>
+                                    <a href="{{ route('login') }}">
+                                        <small>Broker Login</small>
+                                    </a>
+                                </div>
+                                @if ($errors->has('password'))
+                                <span class="help-block font-red-mint">
+                                    <strong>{{ $errors->first('password') }}</strong>
+                                </span>
+                                @endif
+                            </div>
+
+                            <button type="submit" name="submit" value="submit" class="btn btn-primary btn-block" tabindex="4">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap 4 JS dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

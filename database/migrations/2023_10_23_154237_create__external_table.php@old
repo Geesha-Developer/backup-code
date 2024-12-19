@@ -1,0 +1,64 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('external', function (Blueprint $table) {
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->id();
+            $table->string('external_column');
+            $table->string('carrier_name');
+            $table->string('carrier_dot');
+            $table->string('carrier_mc_ff');
+            $table->string('carrier_mc_ff_input');
+            $table->string('carrier_address');
+            $table->string('carrier_address_two');
+            $table->string('carrier_country');
+            $table->string('carrier_address_three');
+            $table->string('carrier_state');
+            $table->string('carrier_city');
+            $table->string('carrier_zip');
+            $table->string('carrier_contact_name');
+            $table->string('carrier_email');
+            $table->string('carrier_telephone');
+            $table->string('carrier_extn');
+            $table->string('carrier_tollfree');
+            $table->string('carrier_fax');
+            $table->string('carrier_payment_terms');
+            $table->string('carrier_tax_id');
+            $table->string('carrier_username');
+            $table->string('carrier_password');
+            $table->string('carrier_factoring_company');
+            $table->string('carrier_notes');
+            $table->string('carrier_status');
+            $table->string('carrier_load_type');
+            $table->string('carrier_blacklisted');
+            $table->string('carrier_corporation');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('external', function (Blueprint $table) {
+            $table->dropForeign(['user_id']);
+            $table->dropColumn('user_id');
+        });
+    }
+};

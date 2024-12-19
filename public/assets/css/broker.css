@@ -1,0 +1,225 @@
+body {
+    font-family: 'Poppins' !important;
+}
+tbody {
+    font-size: 11px;
+}
+    .table-responsive{
+    display: revert-layer;
+}
+
+    table.dataTable thead .sorting:before,
+    table.dataTable thead .sorting_asc:before,
+    table.dataTable thead .sorting_desc:before,
+    table.dataTable thead .sorting_asc_disabled:before,
+    table.dataTable thead .sorting_desc_disabled:before {
+        right: 1em;
+        content: unset !important;
+    }
+
+    table.dataTable thead .sorting:after,
+    table.dataTable thead .sorting_asc:after,
+    table.dataTable thead .sorting_desc:after,
+    table.dataTable thead .sorting_asc_disabled:after,
+    table.dataTable thead .sorting_desc_disabled:after {
+        right: 0.5em;
+        content: unset !important;
+    }
+    table.dataTable thead .sorting {
+    background-image: unset;
+}
+.dataTables_wrapper .no-footer {
+    margin-top: 10px;
+    font-size: 15px;
+}
+.dataTables_wrapper .no-footer{
+    margin-top: 10px;
+    font-size: 15px;
+}
+#DataTables_Table_0_filter {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.card-header {
+    background: none !important;
+    margin-bottom: 6px !important;
+    color: #000 !important;
+    text-align: left;
+    padding: 20px 0 10px 0;
+    margin: 0;
+    border-bottom: unset;
+}
+
+.card-body .form-group label {
+    margin-bottom: 0;
+    font-weight: 600;
+    text-align: left;
+    font-size: 13px;
+    color: #4a4a4a;
+    font-family: 'Poppins';
+}
+.card-body .form-group .form-control {
+        height: 31px !important;
+        font-size: 13px;
+    }
+.card-body .form-group {
+    margin: 10px 0 4px 0;
+}
+
+#customer_file_upload {
+    width: 100%;
+    border: 1px solid #cbccc8;
+    padding: 32px 20px;
+    border-radius: 6px;
+}
+.card-body .form-group label{
+    width: 100%;
+}
+
+.card-body .form-group #customer_city {
+    height: 28px !important;
+    font-size: 12px;
+}
+.card-body .form-group input#customer_zip{
+    height: 28px !important;
+    font-size: 12px;
+}
+.card .body .modal-dialog {
+    margin-top: 2%;
+}
+.card-body {
+    padding: 0 20px;
+}
+.card-body .form-group label {
+    width: 100%;
+}
+.upload-button input#upload {
+    position: absolute;
+    right: -9999px;
+    visibility: hidden;
+    opacity: 0;
+}
+.upload-button p.choose-file {
+    padding: 9px 6px;
+    font-size: 18px;
+    color: #728f22;
+}
+label.upload-button {
+    text-align: center;
+    border: 1px solid #ccc;
+    height: 80px;
+        border-radius: 8px;
+}
+.form-group p {
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: #817d7d;
+}
+
+.modal .modal-header .close {
+    color: #ffffff !important;
+    text-shadow: none;
+    padding: 0 5px;
+    font-size: 23px;
+    top: 30px;
+}
+.modal-content .modal-header {
+    padding-top: 0;
+}
+.modal-content .modal-header .modal-title {
+    margin: top 0;}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+
+    background-color: #27310c !important;
+}
+
+.modal-open #exampleModal {
+    background: #000000c2;
+}
+
+#exampleModal .card-header h3 {
+    font-size: 13px;
+    text-align: left;
+    margin-left: 21px;
+    font-weight: 700;
+    font-family: 'Poppins';
+}
+
+.block-header {
+    padding: 16px 15px !important;
+}
+.btn-primary {
+    background-color:#27310c;
+    color: #fff;
+    font-size: 15px;
+}
+.btn-primary:hover {
+    background-color:#555555;
+}
+thead {
+    font-size: 14px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.table-responsive {
+    max-height: 73vh;
+    overflow-y: auto; 
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1; 
+    border-bottom: 1px solid #dee2e6; 
+}
+
+.table th, .table td {
+    white-space: nowrap; 
+}
+tbody {
+    font-size: 12px;
+    text-align: center;
+}
+thead tr th {
+    padding: 7px 10px !important;
+    font-size: 14px;
+}
+tbody {
+    font-size: 12px;
+}
+
+
+  
+.modal-footer .btn {
+    font-size: 14px;
+    padding: 8px 40px;
+}
+.modal-footer{
+    justify-content: center;
+}
+#dataTable_filter {
+    margin-top: 10px;
+    font-size: 15px;
+}
+#dataTable_length{
+    margin-top: 10px;
+    font-size: 15px;
+}
+#dataTables_length{
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+.table-responsive {
+    display: block !important;
+}
+}
+.sidebar .menu {
+    position: relative;
+    top: 21px;
+}
+
+
